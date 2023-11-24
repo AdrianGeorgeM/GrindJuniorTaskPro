@@ -1,0 +1,12 @@
+{
+  "name": "grindtask",
+  "version": "1.0.0",
+  "author": "Max Henchman",
+  "license": "ISC",
+  "scripts": {
+    "build-css": "sass --watch src/scss/main.scss:public/main.css"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

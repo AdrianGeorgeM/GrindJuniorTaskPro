@@ -1,0 +1,12 @@
+
+# Ignore compiled code
+build/
+
+# Ignore log files
+*.log
+
+# Ignore node_modules directory
+/node_modules/
+
+# Exclude a specific config file
+!config.json

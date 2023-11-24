@@ -1,0 +1,153 @@
+/* Reset and Box Sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts and Background */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f1e6d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container Styles */
+.container {
+  text-align: center;
+  background: #b9b5b5;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 1.5em;
+  color: #080808;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form .form__input {
+  width: calc(100% - 270px);
+  padding: 10px 15px;
+  font-size: 1em;
+  border: 2px solid #000;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+.form .form__btn {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  background-color: #000;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.form .form__btn:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+/* Search Results Styles */
+.search-results {
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+}
+
+/* User Profile Styles */
+.user-profile {
+  display: flex;
+  width: 100%;
+}
+.user-profile .user-image {
+  width: 120px;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+.user-profile .user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1em;
+  flex: 1;
+  background: white;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.user-profile .user-info .name {
+  font-weight: bold;
+  background: black;
+  color: #fff;
+  padding: 5px;
+  width: 100%;
+  text-align: left;
+  border-radius: 0 10px 0 0;
+}
+.user-profile .user-info .email,
+.user-profile .user-info .phone {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  /* Add animation for text information */
+  transition: transform 0.3s ease;
+}
+.user-profile .user-info .email:hover,
+.user-profile .user-info .phone:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  /* Adjust styles for screens with a maximum width of 768px */
+  .container {
+    padding: 20px;
+    max-width: 100%;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  .form__input {
+    width: 100%;
+  }
+  .form__btn {
+    width: 100%;
+  }
+  .user-profile {
+    flex-direction: column;
+    /* Adjust animation for text information on small screens */
+  }
+  .user-profile .user-image {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+  .user-profile .user-info {
+    border-radius: 0 0 10px 10px;
+  }
+  .user-profile .email:hover,
+  .user-profile .phone:hover {
+    transform: scale(1.05);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
