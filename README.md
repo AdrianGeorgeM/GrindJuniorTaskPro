@@ -15,7 +15,7 @@ Before you start, make sure you have the following prerequisites in place:
 2. Navigate to the project directory using your terminal or command prompt:
 
 ```bash
-cd grindtask
+cd GrindJuniorTaskPro
 ```
 
 3. Install all the necessary project dependencies:
