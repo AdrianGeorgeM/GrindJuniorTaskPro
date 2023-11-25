@@ -1,4 +1,4 @@
-const BASE_API_URL = 'https://jsonplaceholder.typicode.com/';
+const BASE_API_URL = 'https://jsonplaceholder.org/';
 
 const inputField = document.querySelector('[id-input]');
 const searchButton = document.querySelector('[search-button]');
@@ -10,16 +10,19 @@ const fetchAndDisplayUserData = async (userId) => {
 		if (!response.ok) throw new Error('User not found');
 
 		const userData = await response.json();
+
+		const fullName = `${userData.firstname} ${userData.lastname}`;
+
 		resultsContainer.innerHTML = `
-      <div class="user-profile">
-			<img src="https://i.pravatar.cc/300?u=${userData.id}" alt="User Image" class="user-image">
-        <div class="user-info">
-          <p class="name"><strong>${userData.name}</strong></p>
-          <p class="email">${userData.email}</p>
-          <p class="phone">${userData.phone}</p>
-        </div>
-      </div>
-    `;
+            <div class="user-profile">
+                <img src="https://i.pravatar.cc/300?u=${userData.id}" alt="User Image" class="user-image">
+                <div class="user-info">
+                    <p class="name"><strong>${fullName}</strong></p>
+                    <p class="email">${userData.email}</p>
+                    <p class="phone">${userData.phone}</p>
+                </div>
+            </div>
+        `;
 	} catch (error) {
 		resultsContainer.innerHTML = `<p>Error: ${error.message}</p>`;
 		resultsContainer.style.display = 'block';
